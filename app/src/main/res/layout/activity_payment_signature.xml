@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
+
+    <com.miurasample.ui.payment.signature.SignatureView
+        android:id="@+id/payment_signature_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/payment_signature_b_clear" />
+
+    <Button
+        android:id="@+id/payment_signature_b_clear"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/button_effect"
+        android:layout_above="@+id/payment_signature_b_accept"
+        android:text="@string/clear" />
+
+    <Button
+        android:id="@+id/payment_signature_b_accept"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/button_effect"
+        android:layout_alignParentBottom="true"
+        android:text="@string/accept" />
+
+
+</RelativeLayout>

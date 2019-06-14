@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:screenOrientation="sensorLandscape">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/payment_data_et_amount"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/EntAmount"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/payment_data_et_description"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/EnterDescrip"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/payment_data_b_mag_payment"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/StartMag" />
+
+            <Button
+                android:id="@+id/payment_data_b_chip_payment"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/StartChip" />
+
+            <Button
+                android:id="@+id/payment_data_b_magchip_payment"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/StartBoth" />
+
+            <Button
+                android:id="@+id/payment_contactless"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/Contactless" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

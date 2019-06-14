@@ -1,0 +1,146 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.miurasample">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.usb.accessory" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- AV Engine Permission setting -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".core.MiuraApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="false"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:screenOrientation="sensor"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.usb.accessory.AccessoryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleInstance"
+        >
+
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
+            </intent-filter>
+
+            <meta-data android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                       android:resource="@xml/accessory_filter"/>
+        </activity>
+
+        <activity
+            android:name=".ui.usb.host.UsbDeviceSerialActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleInstance"/>
+
+        <activity
+            android:name=".ui.devices.DevicesActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.info.DeviceInfoActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.logs.LogsActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.test.TestActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.payment.data.PaymentDataActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.payment.mag.PaymentMagActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity android:name=".ui.payment.contactless.ContactlessActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.payment.chip.PaymentChipActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.payment.signature.PaymentSignatureActivity"
+            android:noHistory="true"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.payment.summary.PaymentSummaryActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.payment.magchip.PaymentMagChipActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.payment.check.PaymentPreChecksActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name="ui.payment.contactless.ContactlessActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.rpi.RpiTestActivity"
+            android:screenOrientation="sensor"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name=".ui.m12.m12Activity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.miurasample.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+    </application>
+</manifest>

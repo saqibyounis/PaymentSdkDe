@@ -1,0 +1,33 @@
+<configuration>
+  <appender name="sdk-logcat" class="ch.qos.logback.classic.android.LogcatAppender">
+    <tagEncoder>
+      <pattern>%logger{19} SDK</pattern>
+    </tagEncoder>
+    <encoder>
+      <pattern>[%thread] %msg</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="app-logcat" class="ch.qos.logback.classic.android.LogcatAppender">
+    <tagEncoder>
+      <pattern>%logger{19} App</pattern>
+    </tagEncoder>
+    <encoder>
+      <pattern>[%thread] %msg</pattern>
+    </encoder>
+  </appender>
+
+
+  <logger name="com.miurasystems.miuralibrary" level="TRACE" additivity="false">
+    <appender-ref ref="sdk-logcat" />
+  </logger>
+
+  <logger name="com.miurasample" level="TRACE" additivity="false">
+    <appender-ref ref="app-logcat" />
+  </logger>
+
+  <root level="TRACE">
+    <appender-ref ref="app-logcat" />
+  </root>
+
+</configuration>

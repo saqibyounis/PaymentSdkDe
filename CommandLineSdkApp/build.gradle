@@ -1,0 +1,44 @@
+version '1.0'
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.miurasystems.sampleapps.commandline.Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter() // for slf4j-api
+    google() // for support-annotations-25.3.1. TODO fix SDK's transitive dependencies?
+    mavenCentral() // for jsr305
+}
+
+dependencies {
+    compile project(':Annotations')
+    compile project(':JavaMpi'), project(':ConnectorExamples'), project(':Examples')
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+
+    // for ParametersAreNonnullByDefault, Nonnull, Nullable:
+    compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile group: 'org.apache.commons', name: 'commons-text', version: '1.2'
+
+    // JNA is optionally required by jline
+    // https://mvnrepository.com/artifact/net.java.dev.jna/jna
+    compile group: 'net.java.dev.jna', name: 'jna', version: '4.5.0'
+
+    // https://mvnrepository.com/artifact/org.jline/jline
+    compile group: 'org.jline', name: 'jline-terminal', version: '3.5.1'
+    compile group: 'org.jline', name: 'jline-reader', version: '3.5.1'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'pl.pragmatists:JUnitParams:1.0.6'
+}
+
+run {
+    standardInput = System.in
+    if (project.hasProperty("appArgs")) {
+        args Eval.me(appArgs)
+    }
+}

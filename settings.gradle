@@ -1,0 +1,1 @@
+include ':app', ':IntegrationTests', ':ConnectorExamples', ':JavaMpi', ':CommandLineSdkApp', ':Examples', ':Annotations', ':EventPrinterGui'

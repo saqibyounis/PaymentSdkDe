@@ -1,0 +1,30 @@
+version '1.0'
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.miurasystems.sampleapps.eventprintergui.Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter() // for slf4j-api
+    google() // for support-annotations-25.3.1. TODO fix SDK's transitive dependencies?
+    mavenCentral() // for jsr305
+}
+
+dependencies {
+    compile project(':Annotations')
+    compile project(':JavaMpi'), project(':ConnectorExamples')
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    runtime group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+
+    // for ParametersAreNonnullByDefault, Nonnull, Nullable:
+    compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'pl.pragmatists:JUnitParams:1.0.6'
+
+    compile group: 'com.intellij', name: 'forms_rt', version: '7.0.3'
+}

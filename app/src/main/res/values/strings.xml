@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">MiuraSample</string>
+    <string name="AppVerNo">0.7</string>
+    <string name="common_error">common_error"</string>
+    <string name="Payments">Payments</string>
+    <string name="NewPayments">New Payments</string>
+    <string name="Devices">Devices</string>
+    <string name="DeviceInfo">Device Info</string>
+    <string name="FunctionTest">Function Test</string>
+    <string name="POSzle">POSzle</string>
+    <string name="M012">Print To M012</string>
+    <string name="PrintingReceipt">Press button to print test receipt.</string>
+    <string name="Others">Other</string>
+    <string name="Settings">Bluetooth Settings</string>
+    <string name="About">About</string>
+    <string name="Peripheral">Peripheral items</string>
+    <string name="PeriphItems">Peripheral items:</string>
+    <string name="cancel">Cancel</string>
+    <string name="Continue">Continue</string>
+    //activity_payment_data
+    <string name="EntAmount">Enter amount</string>
+    <string name="EnterDescrip">Enter description</string>
+    <string name="StartMag">Start mag swipe payment</string>
+    <string name="StartChip">Start chip card payment</string>
+    <string name="StartBoth">Start mag and chip payment</string>
+    <string name="Contactless">Contactless/Mag/Chip</string>
+    <string name="normal">Normal</string>
+    <string name="pin">PIN</string>
+    <string name="depending">Next step: Depending on card settings, customer will be asked either for PIN or Signature.</string>
+    //activity_payment_signature
+    <string name="sign">Sign</string>
+    <string name="clear">Clear</string>
+    <string name="accept">Accept</string>
+    //Device_Info
+    <string name="deviceinfo">DEVICE INFO</string>
+    <string name="setDefault">Set as default device</string>
+    <string name="UnDefault">Unset default device</string>
+    <string name="time">Update time</string>
+    <string name="Mpi">Update MPI</string>
+    <string name="MpiOs">Update Mpi-OS</string>
+    <string name="Rpi">Update RPI</string>
+    <string name="RpiOs">Update Rpi-Os</string>
+    <string name="KeyInject">Key Injection</string>
+    <string name="ShowCap">Show Capabilities</string>
+    <string name="ShowCon">Show Configuration</string>
+    <string name="ShowLogs">Show Logs</string>
+    <string name="playGround">[ Playground ]</string>
+    <string name="SkipUpDate">Skip up date?</string>
+    <string name="UpdateConfigFiles">Update Config Files</string>
+    //config_files
+    <string name="Aacdol">Update Aacdol</string>
+    <string name="Arqcdol">Update Arqcdol</string>
+    <string name="Contact_less">Update Contactless</string>
+    <string name="Ctls_prompts">Update Ctls prompts</string>
+    <string name="Emv">Update Emv</string>
+    <string name="Mpi_dynamic">Update Mpi dynamic</string>
+    <string name="Mpi_production">Update Mpi production</string>
+    <string name="Opdol">Update Opdol</string>
+    <string name="P2pedol">Update P2pedol</string>
+    <string name="Tcdol">Update Tcdol</string>
+    <string name="Tdol">Update Tdol</string>
+    <string name="Trmdol">Update Trmdol</string>
+    //activity_devices
+    <string name="active">To make a device visible in here, first you need to connect it via Settings > Bluetooth.</string>
+    <string name="available">AVAILABLE DEVICES</string>
+    <string name="paired">No paired devices.\nIf possible select one from the list below.</string>
+    <string name="selected">SELECTED DEVICES</string>
+    //rpi_test_activity
+    <string name="enterText">Enter text to print or use the Barcode Scanner.</string>
+    <string name="barcodeEnabled">Barcode Scanner Enabled?</string>
+    <string name="printText">Print Text</string>
+    <string name="printImage">Print Image</string>
+    <string name="sendImage">Send Image</string>
+    <string name="openDrawer">Open Cash Drawer</string>
+    <string name="printReceipt">Print Receipt</string>
+    <string name="printEsc">Print EscPos</string>
+    <string name="accessory_button">USB Accessory Test</string>
+    <string name="usb_device_button">USB Device Test</string>
+
+    <!-- Accessory Activity -->
+    <string name="accessoryRunTestButton">Perform Operation</string>
+    <string name="accessoryDisconnectButton">Disconnect</string>
+    <string name="accessoryConnectButton">Connect</string>
+    <string name="noConnection">Cannot send: no accessory connected</string>
+
+        <!-- Usb Host Activity -->
+    <string name="usbHostRunTestButton">Perform Operation</string>
+    <string name="usbHostDisconnectButton">Disconnect</string>
+    <string name="usbHostConnectButton">Connect</string>
+
+</resources>

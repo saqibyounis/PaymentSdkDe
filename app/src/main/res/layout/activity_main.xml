@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar"
+        android:src="@drawable/base_header_logo" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/Payments"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/main_button_payment"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:paddingBottom="15dp"
+                        android:text="@string/NewPayments"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/Devices"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/main_button_devices"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:paddingBottom="15dp"
+                        android:text="@string/DeviceInfo"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/FunctionTest"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/main_button_rpi_test"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:paddingBottom="15dp"
+                        android:text="@string/POSzle"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/main_button_m12_test"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:paddingBottom="15dp"
+                        android:text="@string/M012"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:id="@+id/main_button_accessory_test"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:paddingBottom="15dp"
+                        android:text="@string/accessory_button"
+                        android:textSize="16sp"/>
+
+                    <Button
+                        android:id="@+id/main_button_usb_device_test"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:paddingBottom="15dp"
+                        android:text="@string/usb_device_button"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/Others"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/main_button_settings"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:focusableInTouchMode="false"
+                        android:paddingBottom="15dp"
+                        android:text="@string/Settings"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/main_button_about"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/button_effect"
+                        android:focusableInTouchMode="false"
+                        android:paddingBottom="15dp"
+                        android:text="@string/About"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:padding="2dp"
+                        android:inputType="numberDecimal"
+                        android:text="@string/AppVerNo"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

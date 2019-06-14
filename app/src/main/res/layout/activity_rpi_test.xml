@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/app_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/enterText" />
+
+            <EditText
+                android:id="@+id/rpi_test_et_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:id="@+id/rpi_test_switch_barcode_enabled"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/barcodeEnabled"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/rpi_test_b_print_text"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/printText" />
+
+            <Button
+                android:id="@+id/rpi_test_b_print_image"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/printImage"/>
+
+
+            <Button
+                android:id="@+id/rpi_test_b_send_image"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/sendImage"/>
+
+
+            <Button
+                android:id="@+id/rpi_test_b_open_cash"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/openDrawer"/>
+
+            <Button
+                android:id="@+id/rpi_test_b_print_recipt"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/printReceipt"/>
+
+            <Button
+                android:id="@+id/rpi_test_b_print_EscPos"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/button_effect"
+                android:text="@string/printEsc"/>
+
+            <Button
+                android:text="@string/Peripheral"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/button_effect"
+                android:id="@+id/periphItems" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

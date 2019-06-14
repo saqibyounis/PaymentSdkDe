@@ -1,0 +1,15 @@
+version '1.0'
+
+apply plugin: 'java'
+
+// 1.7 to use on older android for now
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral() // for jsr305
+}
+
+dependencies {
+    // for ParametersAreNonnullByDefault, Nonnull, Nullable:
+    compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+}

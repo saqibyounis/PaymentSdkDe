@@ -1,0 +1,22 @@
+version '1.0'
+
+apply plugin: 'java'
+
+// 1.7 to use on older android for now
+sourceCompatibility = 1.7
+
+repositories {
+    jcenter() // for slf4j-api
+    google() // for support-annotations-25.3.1. TODO fix SDK's transitive dependencies?
+}
+
+dependencies {
+    compile project(':Annotations')
+    compile project(':JavaMpi')
+//
+    // for ParametersAreNonnullByDefault, Nonnull, Nullable:
+    compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20180130'
+}
